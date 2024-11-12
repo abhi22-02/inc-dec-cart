@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .card{
+      width: 230px;
+      height: 350px;
+      border:4px solid rgb(239, 220, 11);
+      background-color: rgb(236, 232, 193);
+      border-radius: 20px;
+    }
+    .product-img{
+      display: block;
+      height: 200px;
+      margin-top: 10px;
+      margin-left: 10px;
+      background-color:  rgb(236, 232, 193);
+    }
+  .umb{
+    text-align: center;
+  }
+  .price{
+   padding-top:10px;
+   margin-top: -20px;
+   text-align: center; 
+  }
+  .butt{
+    background-color: skyblue;
+    border-radius: 10px;
+    color:black;
+    margin-left: 80px;
+    margin-top: 10px;
+  }
+  .operation{
+    display: flex;
+    height: 20px;
+    justify-content: center;
+  }
+  </style>
+</head>
+<body>
+  
+  <div class="card">
+    <img src="umbrella.png" class="product-img">
+
+    <h3 class="umb">
+      Waterproof Umbrella
+    </h3>
+    <p class="price">
+      Product price:-50
+    </p>
+    
+       <div class="operation">
+         <img src="minus.png" class="quantity-icon" onclick="decrease()">&nbsp
+         <span id="quantity">1</span>&nbsp
+         <img src="add.png" class="quantity-icon" onclick="increase()">
+       </div>
+
+      <button type="button" class="butt">Buy Now</button>
+  </div>
+
+  <script>
+    const quant=document.getElementById('quantity');
+
+    function increase()
+    {
+      let quantity=parseInt(quant.innerText);
+      quant.innerText=++quantity;
+    }
+
+    function decrease()
+    {
+      let quantity=parseInt(quant.innerText);
+      quant.innerText=--quantity;
+    }
+
+  </script>
+</body>
+</html>
